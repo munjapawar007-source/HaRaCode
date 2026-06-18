@@ -1,4 +1,4 @@
-// Print the sum of the digits of given digit number
+ // Print the sum of the digits of given digit number
 
 #include<stdio.h>
 #include<math.h>
