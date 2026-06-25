@@ -25,13 +25,14 @@ int main()
     cout << "Enter n Number Count:";
     cin >> n;
 
+    cout << "push Element in vector arr: ";
     for(int i = 0; i<n; i++)
     {
         cin >> element;
         nums.push_back(element);
     }
 
-    cout << average(nums) << endl;;
+    cout << "average:" << average(nums) << endl;;
 
     return 0;
 }
