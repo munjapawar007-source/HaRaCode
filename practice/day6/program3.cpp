@@ -9,3 +9,51 @@ Output:84851161
 
 Author: munja
 */
+
+#include<iostream>
+using namespace std;
+
+int reverse(int num)
+{
+    int reversed_num = 0;
+
+    while(num != 0)
+    {
+        reversed_num = (reversed_num * 10) + (num % 10);
+        num /= 10; 
+    }
+    
+    return reversed_num;
+}
+
+int replace(long int num)
+{
+    int digit;
+    long int new_num = 0;
+
+    while(num != 0)
+    {
+        digit = num % 10;
+        if(digit == 0)
+        {
+            new_num = (new_num * 10) + 1;
+        }
+        else
+        new_num = (new_num * 10) + digit;
+        num /= 10;
+    }
+    return reverse(new_num);
+}
+
+int main()
+{
+
+    int n;
+    cout << "enter num:";
+    cin >> n;
+
+    cout << "Replaced number: " << replace(n) << " " << endl;
+    cout << "reversed Number: " << reverse(n) << " " << endl;
+
+    return 0;
+}
